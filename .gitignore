@@ -1,0 +1,8 @@
+/src/User.DDD.Application/bin
+/src/User.DDD.Application/obj
+/src/User.DDD.Domain/bin
+/src/User.DDD.Domain/obj
+/src/User.DDD.Intrastructure/bin
+/src/User.DDD.Intrastructure/obj
+/src/User.DDD.WebApi/obj
+/src/User.DDD.WebApi/bin
