@@ -9,6 +9,6 @@ namespace User.DDD.Domain.Entities
     public abstract class EntitieBase: IAggregateRoot
     {
 
-        protected Guid Id { get; init; }
+        public Guid Id { get; init; }
     }
 }
