@@ -13,7 +13,7 @@ namespace User.DDD.Domain.Entities
     {
         public Guid Id { get; init; }
 
-        public User User { get; init; }
+        public  User User { get; init; }
 
         public Guid UserId { get; init; }
 

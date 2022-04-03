@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using User.DDD.Core;
 using User.DDD.Domain.ValueObjects;
 
 namespace User.DDD.Domain.Entities
@@ -21,7 +17,7 @@ namespace User.DDD.Domain.Entities
 
         public PhoneNumber PhoneNumber { get; private set; }
 
-        public UserAccessFail Access { get; private set; }
+        public  UserAccessFail Access { get; private set; }
 
         private string? password;
 

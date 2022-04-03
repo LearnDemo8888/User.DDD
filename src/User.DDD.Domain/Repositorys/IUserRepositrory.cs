@@ -25,5 +25,7 @@ namespace User.DDD.Domain.Repositorys
         Task<string?> RetrievePhoneCodeAsync(PhoneNumber phoneNumber);
 
         Task PublishEventAsync(UserAccessResultEvent @event);
+
+        Task<Domain.Entities.User?> FindByNameAsync(string name);
     }
 }

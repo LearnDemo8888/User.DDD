@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using User.DDD.Core;
 using User.DDD.Domain.Events;
 using User.DDD.Domain.Repositorys;
 using User.DDD.Domain.ValueObjects;
 
 namespace User.DDD.Domain
 {
-    public class UserDomainService
+    public class UserDomainService: IUserDomainService
     {
         private readonly IUserRepositrory _userReposityory;
         private readonly ISmsCodeSender _smsCodeSender;
@@ -40,7 +41,7 @@ namespace User.DDD.Domain
             }
             else if (user.CheckPassword(password))
             {
-                result = UserAccessResult.ON;
+                result = UserAccessResult.OK;
             }
             else
             {
@@ -48,7 +49,7 @@ namespace User.DDD.Domain
             }
 
 
-            if (result == UserAccessResult.ON)
+            if (result == UserAccessResult.OK)
             {
                 ResetAccessFail(user);
             }
@@ -141,5 +142,7 @@ namespace User.DDD.Domain
 
             user.Access.Fail();
         }
+
+        
     }
 }

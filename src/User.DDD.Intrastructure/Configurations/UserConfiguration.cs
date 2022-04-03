@@ -15,9 +15,11 @@ namespace User.DDD.Intrastructure.Configurations
                 nb.Property(b => b.RegionCode);
                 nb.Property(b => b.Number).HasMaxLength(20).IsUnicode();
             });
+
+           
             builder.HasOne(o => o.Access).WithOne(f=>f.User).HasForeignKey<UserAccessFail>(x=>x.UserId) ;
             builder.Property("password").HasMaxLength(150).HasColumnName("Password").IsUnicode(false);
-
+            builder.Navigation(o=>o.Access).AutoInclude();
             builder.ToTable("T_Users");
         }
     }

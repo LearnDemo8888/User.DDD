@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace User.DDD.Domain
+namespace User.DDD.Core
 {
     public class MD5Helper
     {

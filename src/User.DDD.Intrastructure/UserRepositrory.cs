@@ -25,7 +25,7 @@ namespace User.DDD.Intrastructure
 
         public async Task AddNewLoginHistoryAsync(string email, string msg)
         {
-            var user = await FindOneAsync(email); ;
+            var user = await FindOneAsync(email); 
              _userDbContext.UserLoginHistories.Add(new UserLoginHistory(email,msg, user?.Id));
    
         }
@@ -45,9 +45,9 @@ namespace User.DDD.Intrastructure
             return _userDbContext.Users.Where(u=>u.PhoneNumber.Number== phoneNumber.Number && u.PhoneNumber.RegionCode==phoneNumber.RegionCode).FirstOrDefaultAsync();
         }
 
-        public  Task PublishEventAsync(UserAccessResultEvent @event)
+        public  async Task PublishEventAsync(UserAccessResultEvent @event)
         {
-          return  _imediator.Publish(@event);
+            await _imediator.Publish(@event);
         }
 
         public async Task<string?> RetrievePhoneCodeAsync(PhoneNumber phoneNumber)
@@ -66,7 +66,13 @@ namespace User.DDD.Intrastructure
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
 
-            }); ;
+            }); 
+        }
+
+        public Task<Domain.Entities.User?> FindByNameAsync(string name)
+        { 
+        
+          return _userDbContext.Users.Where(u=>u.Name==name).FirstOrDefaultAsync();
         }
     }
 }

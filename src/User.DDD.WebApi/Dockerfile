@@ -10,6 +10,10 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/User.DDD.WebApi/User.DDD.WebApi.csproj", "src/User.DDD.WebApi/"]
+COPY ["src/User.DDD.Application/User.DDD.Application.csproj", "src/User.DDD.Application/"]
+COPY ["src/User.DDD.Domain/User.DDD.Domain.csproj", "src/User.DDD.Domain/"]
+COPY ["src/User.DDD.Core/User.DDD.Core.csproj", "src/User.DDD.Core/"]
+COPY ["src/User.DDD.Intrastructure/User.DDD.Intrastructure.csproj", "src/User.DDD.Intrastructure/"]
 RUN dotnet restore "src/User.DDD.WebApi/User.DDD.WebApi.csproj"
 COPY . .
 WORKDIR "/src/src/User.DDD.WebApi"

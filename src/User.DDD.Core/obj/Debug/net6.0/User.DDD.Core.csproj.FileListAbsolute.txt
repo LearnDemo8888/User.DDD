@@ -1,0 +1,12 @@
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\bin\Debug\net6.0\User.DDD.Core.deps.json
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\bin\Debug\net6.0\User.DDD.Core.dll
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\bin\Debug\net6.0\User.DDD.Core.pdb
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.csproj.AssemblyReference.cache
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.AssemblyInfoInputs.cache
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.AssemblyInfo.cs
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.csproj.CoreCompileInputs.cache
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.dll
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\refint\User.DDD.Core.dll
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\User.DDD.Core.pdb
+D:\Learn-dotNet\.NET\User.DDD\src\User.DDD.Core\obj\Debug\net6.0\ref\User.DDD.Core.dll
