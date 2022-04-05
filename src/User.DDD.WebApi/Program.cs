@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddDbContext<UserDbContext>(opt => {
     opt. UseSqlite("Data Source=data.db",o=>o.MigrationsAssembly("User.DDD.Intrastructure"));
-    
+  
    
 });
 builder.Services.AddMediatR(Assembly.Load("User.DDD.Application"));
