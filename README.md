@@ -6,11 +6,13 @@ Infrastructure(基础设施)，实体类的配置，DBContext,防腐层接口实
 
 WebAPi:Controller、事件（领域事件，集成事件）的响应类
 
-![image-20220404151938822](C:\Users\lurud\AppData\Roaming\Typora\typora-user-images\image-20220404151938822.png)
+
+
+![image-20220404151938822](D:\Learn-dotNet\.NET\User.DDD\image-20220404151938822.png)
 
 
 
-![image-20220404175705352](C:\Users\lurud\AppData\Roaming\Typora\typora-user-images\image-20220404175705352.png)
+![image-20220404175705352](D:\Learn-dotNet\.NET\User.DDD\image-20220404175705352.png)
 
 这个架构最重要的是里面的代码依赖原则：**从外向内，并且只有这一个方向。处于内环的代码，不应该知道外环的任何东西**。
 

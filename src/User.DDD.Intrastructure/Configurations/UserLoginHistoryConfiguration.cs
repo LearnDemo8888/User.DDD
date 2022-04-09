@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using User.DDD.Domain.Entities;
 
 namespace User.DDD.Intrastructure.Configurations
@@ -13,8 +8,8 @@ namespace User.DDD.Intrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<UserLoginHistory> builder)
         {
-            builder.HasKey("Id");
-         
+            builder.HasKey(x => x.Id);
+            //.IsClustered(false);//对于Guid主键，不要建聚集索引，否则插入性能很差;
 
             builder.ToTable("T_UserLoginHistorys");
         }

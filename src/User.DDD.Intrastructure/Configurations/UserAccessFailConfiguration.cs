@@ -10,7 +10,7 @@ namespace User.DDD.Intrastructure.Configurations
         public void Configure(EntityTypeBuilder<UserAccessFail> builder)
         {
 
-            builder.HasKey("Id");
+            builder.HasKey(x => x.Id);
             builder.Property("isLockOut").HasColumnName("IsLockOut");
             builder.ToTable("T_UserAccessFails");
 
