@@ -6,7 +6,7 @@ Infrastructure(基础设施)，实体类的配置，DBContext,防腐层接口实
 
 WebAPi:Controller、事件（领域事件，集成事件）的响应类
 
-![image-20220404151938822](..\User.DDD\assets\image-20220404151938822.png)
+![](D:\Learn-dotNet\.NET\User.DDD\assets\image-20220404151938822.png)
 
 
 
