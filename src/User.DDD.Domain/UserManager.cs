@@ -14,12 +14,12 @@ namespace User.DDD.Domain
     /// 领域服务（领域的逻辑）
     /// 应用服务，调用领域，工作单元，第三方应用高用，验证
     /// </summary>
-    public class UserDomainService: IUserDomainService
+    public class UserManager
     {
         private readonly IUserRepositrory _userReposityory;
         private readonly ISmsCodeSender _smsCodeSender;
 
-        public UserDomainService(IUserRepositrory userReposityory, ISmsCodeSender smsCodeSender)
+        public UserManager(IUserRepositrory userReposityory, ISmsCodeSender smsCodeSender)
         {
             _userReposityory = userReposityory;
             _smsCodeSender = smsCodeSender;

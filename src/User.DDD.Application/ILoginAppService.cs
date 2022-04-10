@@ -7,7 +7,12 @@ using User.DDD.Core;
 
 namespace User.DDD.Application
 {
-    public interface ILoginContract
+    //Contracts 
+
+    /// <summary>
+    /// 应该拆出来还分一层Contracts dto放Contracts层中
+    /// </summary>
+    public interface ILoginAppService
     {
 
        Task<OperationResult>  LoginByEmailAndPasswordAsync(LoginByEmailAndPasswordDto dto);

@@ -21,10 +21,10 @@ builder.Services.AddDbContext<UserDbContext>(opt => {
    
 });
 builder.Services.AddMediatR(Assembly.Load("User.DDD.Application"));
-builder.Services.AddScoped<IUserDomainService, UserDomainService>();
+builder.Services.AddScoped<UserManager>();
 builder.Services.AddScoped<IUserRepositrory, UserRepositrory>();
 builder.Services.AddScoped<ISmsCodeSender, MockSmsCodeSender>();
-builder.Services.AddScoped<ILoginContract, LoginService>();
+builder.Services.AddScoped<ILoginAppService, LoginAppService>();
 
 var app = builder.Build();
 

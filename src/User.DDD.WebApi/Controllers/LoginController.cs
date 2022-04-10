@@ -9,9 +9,9 @@ namespace User.DDD.WebApi.Controllers
     public class LoginController : ControllerBase
     {
 
-        private readonly ILoginContract _loginContract;
+        private readonly ILoginAppService _loginContract;
 
-        public LoginController(ILoginContract loginContract)
+        public LoginController(ILoginAppService loginContract)
         {
             _loginContract = loginContract;
         }

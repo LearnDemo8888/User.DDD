@@ -9,7 +9,7 @@ namespace User.DDD.Intrastructure.Configurations
         public void Configure(EntityTypeBuilder<Domain.Entities.User> builder)
         {
 
-            builder.HasKey("Id");
+           builder.HasKey(x => x.Id);   
             builder.OwnsOne(o => o.PhoneNumber, nb =>
             {
                 nb.Property(b => b.RegionCode);
