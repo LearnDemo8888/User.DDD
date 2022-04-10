@@ -35,8 +35,3 @@ WebAPi:Controller、事件（领域事件，集成事件）的响应类
 - 用户界面层（UI Layer）
 
 这个不解释了。项目最终对外的一层。注意，这儿可能是网站，也可能是API。不需要纠结有没有实际的界面。咱们的实践代码中，我用的是API。
-
-事件参数命名：XXXEto Eto是传统的后缀代表**E**vent **T**ransfer **O**bject
-
-领域服务：后缀以xxxManager
-

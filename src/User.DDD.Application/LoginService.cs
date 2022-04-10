@@ -9,14 +9,14 @@ using User.DDD.Intrastructure;
 
 namespace User.DDD.Application
 {
-    public class LoginAppService : ILoginAppService
+    public class LoginService : ILoginContract
     {
-        private readonly UserManager _userManager;
+        private readonly IUserDomainService _userDomainService;
         private readonly UserDbContext _userDbContext;
 
-        public LoginAppService(UserManager userManager, UserDbContext userDbContext = null)
+        public LoginService(IUserDomainService userDomainService, UserDbContext userDbContext = null)
         {
-            _userManager = userManager;
+            _userDomainService = userDomainService;
             _userDbContext = userDbContext;
         }
 
@@ -28,7 +28,7 @@ namespace User.DDD.Application
                 result.Type = OperationResultType.Fail;
                 result.Msg = "密码长度不能小于6";
             }
-            UserAccessResult userAccessResult=  await _userManager.CheckPassword(dto.Email,dto.Password);
+            UserAccessResult userAccessResult=  await  _userDomainService.CheckPassword(dto.Email,dto.Password);
             switch (userAccessResult)
             {
 
