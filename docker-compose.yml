@@ -1,0 +1,10 @@
+version: '3.4' #Compose文件版本
+services: #服务
+    web: #定义"web"服务 对应的是鉴权中心项目
+        build: #构建
+            context: . #构建上下文（目录）
+            dockerfile: ./src/User.DDD.WebApi/Dockerfile #Dockerfile文件目录
+        ports: #端口
+            - '9080:9080' #容器外部9080 容器内部9080
+        environment: #环境变量
+            - ASPNETCORE_URLS=http://+:9080 #程序在容器内部http://+:9080运行 也可以写成
