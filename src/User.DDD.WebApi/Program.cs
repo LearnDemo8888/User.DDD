@@ -5,6 +5,8 @@ using User.DDD.Application;
 using User.DDD.Domain;
 using User.DDD.Domain.Repositorys;
 using User.DDD.Intrastructure;
+using User.DDD.WebApi.Filters;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,12 @@ builder.Services.AddScoped<ILoginContract, LoginService>();
 
 var app = builder.Build();
 
+app.Use((context, next) =>
+{
+
+    context.Request.EnableBuffering();
+    return next();
+});
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();

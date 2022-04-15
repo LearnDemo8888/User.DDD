@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using User.DDD.WebApi.Filters;
 
 namespace User.DDD.WebApi.Controllers
 {
@@ -29,5 +30,25 @@ namespace User.DDD.WebApi.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost(Name = "GetWeatherForecast1")]
+        [PreventDuplicateSubmit]
+        public IEnumerable<WeatherForecast> Post(Test test)
+        {
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
     }
+
+
+}
+
+public class Test
+{ 
+  public string Name { get; set; }
 }
